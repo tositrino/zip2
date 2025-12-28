@@ -8,15 +8,15 @@ authors = [
     "Chris Hennick <hennickc@amazon.com>",
 ]
 license = "MIT"
-repository = "https://github.com/zip-rs/zip2.git"
+repository = "https://github.com/tositrino/zip2.git"
 keywords = ["zip", "archive", "compression"]
 # Any change to rust-version must be reflected also in `README.md` and `.github/workflows/ci.yaml`.
 # The MSRV policy is documented in `README.md`.
-rust-version = "1.83.0"
+rust-version = "1.91.1"
 description = """
 Library to support the reading and writing of zip files.
 """
-edition = "2021"
+edition = "2024"
 exclude = ["tests/**", "examples/**", ".github/**", "fuzz_read/**", "fuzz_write/**"]
 
 [package.metadata.docs.rs]
@@ -50,7 +50,7 @@ zeroize = { version = "1.8", optional = true, features = ["zeroize_derive"] }
 zstd = { version = "0.13", optional = true, default-features = false }
 zopfli = { version = "0.8", optional = true }
 deflate64 = { version = "0.1.9", optional = true }
-lzma-rust2 = { version = "0.15", optional = true, default-features = false, features = ["std", "encoder", "optimization", "xz"] }
+lzma-rust2 = { version = "0.15.4", optional = true, default-features = false, features = ["std", "encoder", "optimization", "xz"] }
 bitstream-io = { version = "4.5.0", optional = true }
 
 [target.'cfg(fuzzing)'.dependencies]
